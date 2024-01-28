@@ -1,0 +1,17 @@
+.nav {
+    @include margin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+}
+
+ul {
+    display: flex;
+    gap: 55px;
+}
+
+li {
+    color: $main-font-color;
+    font-size: 24px;
+  }

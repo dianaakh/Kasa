@@ -1,0 +1,38 @@
+// VARIABLES //
+
+$main-font-color : #FF6060;
+$main-background-color :#F6F6F6;
+
+// GENERAL //
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: $main-font-color;
+    font-size: 18px;
+}
+
+// MIXINS //
+
+@mixin margin {
+    margin: 0 100px;
+}
+
+@mixin positionCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

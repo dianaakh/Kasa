@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.svg';
 
-const Header= () => {
+const Header = () => {
   return (
     <header className="nav">
       {/* Logo cliquable redirigeant vers la page d'accueil */}

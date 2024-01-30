@@ -9,7 +9,7 @@ const Home = () => {
     return (
       <div>
         <Header />
-        <Banner imageUrl={imgBannerHome} />
+        <Banner imageUrl={imgBannerHome} text={"Chez vous, partout et ailleurs"}/>
         <HousingCards />
         <Footer />
       </div>

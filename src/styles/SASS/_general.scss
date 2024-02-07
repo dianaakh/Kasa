@@ -1,6 +1,7 @@
 // VARIABLES //
 
 $main-font-color : #FF6060;
+$secondary-font-color : #E3E3E3;
 $main-background-color :#F6F6F6;
 
 // GENERAL //
@@ -35,4 +36,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+// MEDIA QUERIES 
+
+@mixin medium-device {
+    @media screen and (min-width : 320px) and (max-width : 768px) {
+        @content;
+    }
+}
+
+@mixin small-device {
+    @media screen and (min-width:767px) and (max-width : 992px){
+        @content;
+    }
 }

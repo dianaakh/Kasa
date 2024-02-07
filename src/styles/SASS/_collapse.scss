@@ -3,6 +3,15 @@
     margin-bottom: 35px;
     width: 100%;
 
+    @include medium-device {
+        margin-top: 0;
+    }
+
+    @include small-device {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
     .collapse_header {
         display: flex;
         align-items: center;
@@ -14,9 +23,28 @@
         position: relative;
         z-index: 2;
 
+        @include medium-device {
+            padding: 12px;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        @include small-device {
+            padding: 10px;
+            border-radius: 5px 5px 5px 5px;
+        }
+
         h2 {
             font-weight: 500;
             font-size: 24px;
+
+            @include medium-device {
+                font-size: 18px;
+            }
+
+            @include small-device {
+                font-size: 13px;
+            }
+
         }
 
         .icon_collapse {
@@ -42,6 +70,19 @@
                 transform: rotate(0);
             }
 
+            @include medium-device {
+                img {
+                    width: 28px;
+                    height: auto;
+                }
+            }
+
+            @include small-device {
+                img {
+                    width: 24px;
+                    height: auto;
+                }
+            }
         }
     }
 }
@@ -56,6 +97,14 @@
 
     p {
         padding: 25px 20px 20px 20px;
+
+        @include medium-device {
+            font-size: 15px;
+        }
+
+        @include small-device {
+            font-size: 12px;
+        }
     }
 
     &.open {
@@ -77,6 +126,14 @@
 
         li {
             font-size: 18px;
+
+            @include medium-device {
+                font-size: 15px;
+            }
+
+            @include small-device {
+                font-size: 12px;
+            }
         }
     }
 }

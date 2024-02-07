@@ -4,6 +4,20 @@
     height: 223px;
     max-width: 100%;
     margin-top: 55px;
+
+    @include medium-device {
+        margin: 35px 50px 0 50px;
+        height: 170px;
+    }
+
+    @include small-device {
+        margin: 20px 20px 0 20px;
+        height: 111px;
+
+        &.styleMobile {
+            height: 223px;
+        }
+    }
 }
 
 .image-container {
@@ -16,6 +30,24 @@
         width: 100%;
         object-fit: cover;
         border-radius: 25px;
+
+        @include medium-device {
+            height: 170px;
+            width: 100%;
+            border-radius: 15px;
+
+        }
+
+        @include small-device {
+            height: 111px;
+            width: 100%;
+            margin: 0;
+            border-radius: 10px;
+
+            &.styleMobile {
+                height: 223px;
+            }
+        }
     }
 
     .text-container {
@@ -29,11 +61,42 @@
         color: white;
         border-radius: 25px;
 
+        @include medium-device {
+            height: 100%;
+            border-radius: 15px;
+        }
+
+        @include small-device {
+            border-radius: 10px;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
         h2 {
             text-align: center;
             margin: 0 15px;
             font-size: 48px;
             font-weight: 500;
+
+            @include medium-device {
+                font-size: 36px;
+            }
+
+            @include small-device {
+                font-size: 24px;
+                text-align: left;
+                width: 220px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
     }
 }

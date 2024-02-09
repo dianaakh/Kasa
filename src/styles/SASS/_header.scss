@@ -4,14 +4,83 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 45px;
-}
 
-ul {
-    display: flex;
-    gap: 55px;
-}
+    @include medium-device {
+        margin: 50px 50px 0 50px;
+    }
 
-li {
-    color: $main-font-color;
-    font-size: 24px;
-  }
+    @include small-device {
+        margin: 20px 20px 0 20px;
+        text-transform: uppercase;
+    }
+
+    img {
+        @include medium-device {
+            height: 54px;
+        }
+
+        @include small-device {
+            height: 46px;
+        }
+    }
+
+    ul {
+        display: flex;
+        gap: 55px;
+
+        @include medium-device {
+            gap: 35px;
+        }
+
+        @include small-device {
+            gap: 27px;
+        }
+    }
+
+    li {
+        color: $main-font-color;
+        font-size: 24px;
+
+        @include medium-device {
+            font-size: 18px;
+        }
+
+        @include small-device {
+            font-size: 12px;
+        }
+    }
+
+    .nav-active {
+        position: relative;
+
+        &::after {
+            content: "";
+            height: 4px;
+            width: 0;
+            background: $main-font-color;
+            position: absolute;
+            border-radius: 10px;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-animation: bottomBorder 0.3s ease forwards;
+            animation: bottomBorder 0.6s ease forwards;
+
+            @include small-device {
+                height: 2px;
+            }
+
+            @-webkit-keyframes bottomBorder {
+                to {
+                    width: 100%;
+                }
+            }
+
+            @keyframes bottomBorder {
+                to {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

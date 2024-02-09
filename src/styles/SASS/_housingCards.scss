@@ -1,39 +1,65 @@
 .housing-cards {
-    @include margin;
-    @include positionCenter;
-    flex-wrap: wrap;
-    gap: 50px 60px;
-    padding: 55px 10px;
-    background-color: $main-background-color;
-    border-radius: 25px;
-    margin-top: 45px;
-    margin-bottom: 50px;
+  @include margin;
+  @include positionCenter;
+  flex-wrap: wrap;
+  gap: 50px 60px;
+  padding: 55px 10px;
+  background-color: $main-background-color;
+  border-radius: 25px;
+  margin-top: 45px;
+  margin-bottom: 50px;
+  position: relative;
+
+  @include medium-device {
+    margin: 35px 50px 0 50px;
+    justify-content: space-between;
+    padding: 25px 10px;
+    row-gap: 20px;
+    column-gap: 15px;
+  }
+
+  @include small-device {
+    margin: 22px 20px 25px 20px;
+    background-color: white;
+    padding: 0;
+    row-gap: 20px;
+  }
+
+  .card {
+    display: flex;
+    width: 28%;
+    flex-direction: column;
+    cursor: pointer;
     position: relative;
 
-    .card {
-        display: flex;
-        width: 28%;
-        flex-direction: column;
-        cursor: pointer;
-        position: relative;
+    @include medium-device {
+      width: 48%;
     }
 
-    img {
-        height: 340px;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-        filter: brightness(90%);
+    @include small-device {
+      width: 100%;
     }
+  }
 
+  img {
+    height: 340px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(90%);
 
-    p {
-        color: white;
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
-        z-index: 1;
-        width: 200px;
+    @include small-device {
+      height: 255px;
     }
+  }
+
+  p {
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 1;
+    width: 200px;
+  }
 }

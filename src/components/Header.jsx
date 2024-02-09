@@ -1,23 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.svg';
 
 const Header = () => {
+  
   return (
     <header className="nav">
       {/* Logo cliquable redirigeant vers la page d'accueil */}
-      <Link to="/">
+      <NavLink to="/">
         <img src={logo} alt="logo Kasa" />
-      </Link>
+      </NavLink>
       <ul>
         {/* Lien de navigation pour la page d'accueil */}
-        <Link to="/">
+        <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
           <li>Accueil</li>
-        </Link>
+        </NavLink>
         {/* Lien de navigation pour la page "A Propos" */}
-        <Link to="/About">
+        <NavLink to="/about" className={(nav) => (nav.isActive ? "nav-active" : "")}>
           <li>A Propos</li>
-        </Link>
+        </NavLink>
       </ul>
     </header>
   );

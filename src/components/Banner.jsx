@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Banner = ({ imageUrl, text }) => {
+const Banner = ({ imageUrl, text, isMobile }) => {
     return (
-    < div className='banner'>
+    < div className={`banner ${isMobile ? 'styleMobile' : ''}`}>
         <div className="image-container">
             <img src={imageUrl} alt="Bannière" />
             <div className="text-container">

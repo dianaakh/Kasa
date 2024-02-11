@@ -41,10 +41,22 @@
 
     @include medium-device {
       width: 48%;
+
+      &:hover {
+        transform: none;
+        box-shadow: none;
+        border-radius: 0;
+      }
     }
 
     @include small-device {
       width: 100%;
+
+      &:hover {
+        transform: none;
+        box-shadow: none;
+        border-radius: 0;
+      }
     }
   }
 
